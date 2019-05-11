@@ -1,19 +1,13 @@
 const path = require("path");
 
-module.exports = function(req, resp) {
-  switch (req.url) {
-    case "/":
-      response.sendFile(path.join(_dirname, "/../public/home.html"));
-      break;
+module.exports = function(app) {
+  // if user enters survey in URL or presses survey button, serves the survey HTML file
+  app.get("/survey", function(req, resp) {
+    resp.sendFile(path.join(__dirname, "/../public/survey.html"));
+  });
 
-    case "/survey":
-      response.sendFile(path.join(_dirname, "/../public/survey.html"));
-      break;
-
-    case "/results":
-      response.sendFile(path.join(_dirname, "/../public/results.html"));
-      break;
-    default:
-      response.status(404).send("404");
-  }
+  // fallback use route for homepage
+  app.use(function(req, resp) {
+    resp.sendFile(path.join(__dirname, "/../public/home.html"));
+  });
 };

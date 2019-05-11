@@ -13,7 +13,7 @@ const routes = {
 };
 
 app.get("/*", (req, resp) => {
-    if (request.url.startsWith("/api")) {
+    if (req.url.startsWith("/api")) {
         routes.api.get(req, resp);
     }
     else {

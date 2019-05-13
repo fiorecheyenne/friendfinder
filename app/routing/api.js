@@ -37,6 +37,6 @@ module.exports = function(app) {
     }
     friends.push(friend);
 
-    res.json(friends[bff]);
+    resp.json(friends[bff]);
   });
 };

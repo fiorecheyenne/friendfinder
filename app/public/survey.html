@@ -13,12 +13,26 @@
     
   </head>
   <body>
-    <section class="hero is-dark is-bold">
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <a class="button is-outlined" href="/home">Home</a>
+          </p>
+          <p class="control">
+            <a class="button is-primary" href="/survey">Survey</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+    </nav>
+
+<section class="hero is-primary is-fullheight is-bold">
       <div class="hero-body">
-<div class="card">
-  <div class="card-content">
-    <p class="title">
-<div class="has-text-black-ter">
+<div class="continer">
+  <div class="column is-full">
      1 is strongly disagree. 5 is strongly agree. <br>
     Answer the questions honestly.<br>
     </p>
@@ -41,7 +55,7 @@
           </div>
         </div>
       </div>
-      <Br>
+
 
 
 
@@ -63,7 +77,7 @@ You love heavy metal<br>
     </div>
   </div>
           
-<br>
+
 
 
 
@@ -86,7 +100,7 @@ You love heavy metal<br>
           </div>
         </div>
 
-<br>
+
 
 
   
@@ -128,7 +142,7 @@ You love heavy metal<br>
                   </div>
                 </div>
               </div>
-              <br>
+             
 
 
 
@@ -150,8 +164,7 @@ You love heavy metal<br>
               </div>
             </div>
           </div>
-          <br>
-
+    
           
             
             <div class="control overflow-auto">
@@ -170,7 +183,7 @@ You love heavy metal<br>
                   </div>
                 </div>
               </div>
-              <br>
+         
 
 
            
@@ -191,7 +204,7 @@ You love heavy metal<br>
                       </div>
                     </div>
                   </div>
-                  <br>
+         
 
 
 
@@ -211,7 +224,7 @@ You love heavy metal<br>
                 </div>
               </div>
             </div>
-            <br>
+           
 
 
        
@@ -231,12 +244,12 @@ You love heavy metal<br>
               </div>
             </div>
           </div>
-          <br>
+         
 
           <a class="button is-rounded" button type ="submit" id="submit">Submit</a>
   </div>
-
 </div>
+</div></div>
 
 
           </h2>
@@ -253,7 +266,7 @@ You love heavy metal<br>
     </header>
     <section class="modal-card-body">
   <h2 id="bestFriend"></h2>
-    <img class="is-rounded" id="bestFriendPhoto" src="https://bulma.io/images/placeholders/128x128.png" />
+    <img class="is-rounded" id="BestFriendPhoto" src="" />
  
     </section>
     <footer class="modal-card-foot">
@@ -284,7 +297,7 @@ You love heavy metal<br>
   if(valid === true) {
   var newUser = {
   name: $("#name").val().trim(),
-  photo: $("#photo").val(),
+  photo: $("#photo").val().trim(),
   scores: [
   $("#question1").val(),
   $("#question2").val(),
@@ -305,6 +318,7 @@ You love heavy metal<br>
 
         $('#bestFriend').html(data.name);
         $("#BestFriendPhoto").attr("src", data.photo);
+        console.log(data.photo)
         $('#bestFriendModal').addClass('is-active');
       });}
        else {

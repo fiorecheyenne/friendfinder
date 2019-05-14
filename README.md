@@ -3,6 +3,7 @@
 Take the survey to find your new best friend!
 
 https://boiling-mesa-70889.herokuapp.com/home
+<img src="css/screenrecord.gif">
 
 <h2>Requirements</h2>
 <ul>

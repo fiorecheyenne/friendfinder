@@ -10,24 +10,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css"
     />
 <link rel="stylesheet" href="../css/style.css">
-    
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
 
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="field is-grouped">
-          <p class="control">
-            <a class="button is-outlined" href="/home">Home</a>
-          </p>
-          <p class="control">
-            <a class="button is-primary" href="/survey">Survey</a>
-          </p>
-        </div>
-      </div>
-    </div>
-    </div>
-    </nav>
+    
 
 <section class="hero is-primary is-fullheight is-bold">
       <div class="hero-body" overflow="hidden">
@@ -35,14 +22,17 @@
  
     <div class="tile is-ancestor">
      <div class="content is-large">1 is strongly disagree. 5 is strongly agree. <br>
-    Answer the questions honestly.<br></div>
+    Answer the questions honestly.<br><br>
+    <a class="button is-primary is-inverted is-outlined is-fullwidth" href="/home"><i class="fas fa-home"></i> Home</a><br>
+  <a class="button is-fullwidth is-primary is-inverted is-outlined" href="https://github.com/fioriecheyenne/friendfinder">
+  <i class="fab fa-github"></i> View the repository </a></div>
     </p></div>
 <br>
 
 <div class="tile is-parent">
   <article class="tile is-child box">
-<input class="input" type="text" id="name" placeholder="Whats your name?">
-<input class="input" type="text" id="photo" placeholder="Photo URL">
+<i class='fas fa-user-alt'></i> Name: <input class="input" type="text" id="name" placeholder="Whats your name?"><br><br>
+<i class="fas fa-link"></i> URL to photo:<input class="input" type="text" id="photo" placeholder="Photo URL">
   </article></div></div>
 
 
@@ -50,10 +40,11 @@
       <div class="tile is-parent">
     <article class="tile is-child box">
     <div class="control overflow-auto">
+    
       You are a free spirit<br><br>
       <div class="field">
         <div class="control">
-   <div class="select is-primary is-medium">
+   <div class="select is-primary is-medium is-fullwidth">
             <select id="question1">
     <option> </option>
               <option value='1'>1</option>
@@ -79,7 +70,7 @@
 You love heavy metal<br><br>
   <div class="field">
     <div class="control">
-      <div class="select is-primary is-medium">
+      <div class="select is-primary is-medium is-fullwidth">
         <select id="question2">
 <option> </option>
       <option value='1'>1</option>
@@ -105,7 +96,7 @@ You love heavy metal<br><br>
         You do not drink alcohol<br><br>
         <div class="field">
           <div class="control">
-     <div class="select is-primary is-medium">
+     <div class="select is-primary is-medium is-fullwidth">
               <select id="question3">
       <option> </option>
                 <option value='1'>1</option>
@@ -129,7 +120,7 @@ You love heavy metal<br><br>
       <content> You love yourself<br><br>
       <div class="field">
         <div class="control">
-   <div class="select is-primary is-medium">
+   <div class="select is-primary is-medium is-fullwidth">
             <select id="question4">
     <option> </option>
               <option value='1'>1</option>
@@ -154,7 +145,7 @@ You love heavy metal<br><br>
               <content>You are confident <br><br>
               <div class="field">
                 <div class="control">
-           <div class="select is-primary is-medium">
+           <div class="select is-primary is-medium is-fullwidth">
                     <select id="question5">
             <option> </option>
                       <option value='1'>1</option>
@@ -180,7 +171,7 @@ You love heavy metal<br><br>
              <content>You are independent <br><br>
           <div class="field">
             <div class="control">
-       <div class="select is-primary is-medium">
+       <div class="select is-primary is-medium is-fullwidth">
                 <select id="question6">
         <option> </option>
                   <option value='1'>1</option>
@@ -204,7 +195,7 @@ You love heavy metal<br><br>
              <content> You like pickles<br><br>
               <div class="field">
                 <div class="control">
-           <div class="select is-primary is-medium">
+           <div class="select is-primary is-medium is-fullwidth">
                     <select id="question7">
             <option> </option>
                       <option value='1'>1</option>
@@ -230,7 +221,7 @@ You love heavy metal<br><br>
                   You're a dog person<br><br>
                   <div class="field">
                     <div class="control">
-               <div class="select is-primary is-medium">
+               <div class="select is-primary is-medium is-fullwidth">
                         <select id="question8">
                 <option> </option>
                           <option value='1'>1</option>
@@ -256,7 +247,7 @@ You love heavy metal<br><br>
             You're overall happy<br><br>
             <div class="field">
               <div class="control">
-         <div class="select is-primary is-medium">
+         <div class="select is-primary is-medium is-fullwidth">
                   <select id="question9">
           <option value='sel'> </option>
                     <option>1</option>
@@ -281,7 +272,7 @@ You love heavy metal<br><br>
          
           <div class="field">
             <div class="control">
-       <div class="select is-primary is-medium">
+       <div class="select is-primary is-medium is-fullwidth">
                 <select id="question10">
                 
                   <option></option>
@@ -299,7 +290,7 @@ You love heavy metal<br><br>
          </div>
          </article></div></div>
 <div class="tile is-vertical">
-          <a class="button is-rounded" button type ="submit" id="submit">Submit</a>
+          <a class="button is-rounded is-primary is-inverted is-outlined" button type ="submit" id="submit">Submit</a>
   </div></div>
 </div>
 </div></div>
@@ -382,5 +373,6 @@ You love heavy metal<br><br>
 
   $(".delete").on("click", function() {
     $('#bestFriendModal').removeClass('is-active');
+
   });
 </script>
